@@ -30,7 +30,7 @@
 
 解决：
 ======
-···
+```
 int maxSatisfied(int* customers, int customersSize, int* grumpy, int grumpySize, int X){
     int sum = 0, temp, i, j;
 	for(i = 0; i < customersSize; i++)
@@ -53,4 +53,4 @@ int maxSatisfied(int* customers, int customersSize, int* grumpy, int grumpySize,
 	}
 	return sum;
 }
-···
+```
