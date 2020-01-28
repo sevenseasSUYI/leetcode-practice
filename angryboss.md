@@ -34,24 +34,24 @@
 ```
 int maxSatisfied(int* customers, int customersSize, int* grumpy, int grumpySize, int X){
     int sum = 0, temp, i, j;
-	for(i = 0; i < customersSize; i++)
+    for(i = 0; i < customersSize; i++)
     {
-		if(grumpy[i] == 0)
+	if(grumpy[i] == 0)
         sum+=customers[i];
-	}
-	temp = sum;
+    }
+    temp = sum;
     int temp1 = sum;
-	for(i = 0; i < (customersSize - X + 1); i++)
+    for(i = 0; i < (customersSize - X + 1); i++)
     {
         temp = temp1;
-		for(j = 0; j < X; j++)
+        for(j = 0; j < X; j++)
         {
-			if(grumpy[i+j] == 1)
-            temp+=customers[i+j];
-		}
-		if(sum < temp)
-        sum = temp;
+	    if(grumpy[i+j] == 1)
+              temp+=customers[i+j];
 	}
-	return sum;
+	if(sum < temp)
+          sum = temp;
+    }
+    return sum;
 }
 ```
